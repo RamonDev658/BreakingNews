@@ -1,6 +1,7 @@
 const express = require('express')
 const userRoute= require('./src/routes/user.route')
 const app = express()
+const connectDatabase = require("./src/database/db")
 //Rota
     //http method(CRUD<CREATE,READ,UPDATE,DELETE>),
         //GET- pega uma info
@@ -11,6 +12,8 @@ const app = express()
     //Name>Um identificador da rota,
     //Function(Callback)-responsável por executar algum comando.
 const port = 3000;
+
+connectDatabase()
 app.use(express.json());  
 
 app.use("/user", userRoute);
