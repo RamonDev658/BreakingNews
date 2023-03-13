@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "API for SPA breaking news",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "start": "nodemon index"
+    
   },
   "keywords": [],
   "author": "Ramon Silva",
